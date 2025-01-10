@@ -46,9 +46,9 @@ const Hero = () => {
               <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
                 <img
                   src={robot}
-                  alt="hero"
+                  alt="AI"
                   width={1024}
-                  height={1800}
+                  height={490}
                   className="w-full"
                 />
               </div>
@@ -56,7 +56,8 @@ const Hero = () => {
           </div>
 
           {/* Hero Background */}
-          <div>
+          {/* This classname make the image go to the back become the background of image robot */}
+          <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
               src={heroBackground}
               alt="hero"
