@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "./Section";
-import { curve } from "../assets";
+import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button";
 
 const Hero = () => {
@@ -34,8 +34,37 @@ const Hero = () => {
           <Button href="/pricing" white>
             Get Started
           </Button>
+        </div>
+        {/* Rest of Hero will be image */}
+        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
+          <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
+            <div className="relative bg-n-8 rounded-[1rem]">
+              {/* That will give a great rectangle */}
+              <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
 
-          {/* Rest of Hero will be image */}
+              {/* call the robot image */}
+              <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
+                <img
+                  src={robot}
+                  alt="hero"
+                  width={1024}
+                  height={1800}
+                  className="w-full"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Hero Background */}
+          <div>
+            <img
+              src={heroBackground}
+              alt="hero"
+              width={1440}
+              height={1800}
+              className="w-full"
+            />
+          </div>
         </div>
       </div>
     </Section>
