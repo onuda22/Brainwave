@@ -82,6 +82,8 @@ const Hero = () => {
               className="w-full"
             />
           </div>
+
+          <BackgroundCircles />
         </div>
       </div>
     </Section>
