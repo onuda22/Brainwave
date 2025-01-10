@@ -1,8 +1,14 @@
 import Section from "./Section";
 import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button";
+import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
+import { heroIcons } from "../constants";
+import { ScrollParallax } from "react-just-parallax";
+import { useRef } from "react";
 
 const Hero = () => {
+  const parallaxRef = useRef(null);
+
   return (
     <Section
       className="pt-[12rem] -mt-[5.25]"
@@ -11,10 +17,10 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      <div className="container relative">
+      <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
           <h1 className="h1 mb-6">
-            Explore the Possibilities of AI Chatting with BrainwaveCurve
+            Explore the Possibilities of AI Chatting with {""}
             <span className="inline-block relative">
               Brainwave
               <img
@@ -50,6 +56,17 @@ const Hero = () => {
                   height={490}
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                 />
+
+                {/* Floating Icons */}
+                <ScrollParallax isAbsolutelyPositioned>
+                  <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop-blur border border-n-1/10 rounded-2xl xl:flex">
+                    {heroIcons.map((icon, index) => (
+                      <li className="p-5" key={index}>
+                        <img src={icon} alt={icon} width={24} height={25} />
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollParallax>
               </div>
             </div>
           </div>
