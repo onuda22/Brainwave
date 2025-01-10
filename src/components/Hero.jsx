@@ -1,4 +1,3 @@
-import React from "react";
 import Section from "./Section";
 import { curve, heroBackground, robot } from "../assets";
 import Button from "./Button";
@@ -49,7 +48,7 @@ const Hero = () => {
                   alt="AI"
                   width={1024}
                   height={490}
-                  className="w-full"
+                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                 />
               </div>
             </div>
