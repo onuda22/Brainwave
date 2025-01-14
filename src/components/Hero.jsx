@@ -5,6 +5,7 @@ import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
+import Generating from "./Generating";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -20,7 +21,7 @@ const Hero = () => {
       <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
           <h1 className="h1 mb-6">
-            Explore the Possibilities of AI Chatting with {""}
+            Explore the Possibilities of &nbsp;AI&nbsp; Chatting with {""}
             <span className="inline-block relative">
               Brainwave
               <img
@@ -56,6 +57,9 @@ const Hero = () => {
                   height={490}
                   className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%]"
                 />
+
+                {/* This feature add after Floating Icons and Hero Background timeline */}
+                <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
                 {/* Floating Icons */}
                 <ScrollParallax isAbsolutelyPositioned>
